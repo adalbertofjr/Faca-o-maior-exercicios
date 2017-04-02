@@ -48,12 +48,14 @@ terminal. Note that you may need to change the version number on the first and
 third lines. Note that you may need to run the following command
 with `sudo` out in front.
 
-unzip ~/Downloads/gradle-3.3-all.zip -d /usr/local/gradle/ &&\
+sudo unzip ~/Downloads/gradle-3.4.1-all.zip -d /usr/local/gradle/ &&\
 echo '# Adding Gradle to system path
-export GRADLE_HOME=/usr/local/gradle/gradle-3.3
+export GRADLE_HOME=/usr/local/gradle/gradle-3.4.1
 PATH=$GRADLE_HOME/bin:$PATH
-export PATH' >> ~/.bash_profile &&\
+export PATH >> ~/.bash_profile &&\
 source ~/.bash_profile
+
+export PATH=$PATH:/usr/local/gradle/gradle-3.4.1/bin
 
 ******************* Windows Instructions *******************
 
@@ -101,7 +103,7 @@ much faster the second run is.
 
 task helloWorld {
     doLast{
-        println "Hello, World!"        
+        println "Hello, World!"
     }
 }
 
